@@ -1,0 +1,28 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+
+<% if (messages.success) { %>
+    <div class="alert alert-success">
+        <%= messages.success %>
+    </div>
+ <% } %>
+
+ <div class="container">
+    <div class="jumbotron">
+        <br>
+        <h1 class="display-5"><strong>Bem vindo ao painel Administrativo da Galeria de Filmes</strong></h1>
+    </div>
+    <hr>
+    <div class="card">
+        <div class="card-header">
+            <h1>Para onde deseja ir ?</h1>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li><a href="/imagens">Galeria de Filmes</a></li>
+            </ul>
+        </div>
+    </div>
+ </div>
+
+ <%- include ('partials/footer.ejs') %>
