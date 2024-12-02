@@ -11,15 +11,16 @@
                 <% imagens.forEach(imagens => { %>
                     <div class="col-md-3 m-auto">
                         <img src="uploads/<%= imagens.file %>" alt="Erro" class="img-thumbnail">
+                            <h5>Título: <%= imagens.titulo %></h5>
+                            <h5>Ano: <%= imagens.ano %></h5>
                     </div>
-                </div>
                <% }) %>
                <hr>
                <form action="/upload" method="POST" enctype="multipart/form-data">
                 <label>Título do Filme:</label>
                 <input type="text" name="titulo" placeholder="Insira o título do filme" class="form-control" required>
                 <br>
-                <label>Ano do Filme:</label>
+                <label>Ano do lançamento do Filme:</label>
                 <input type="text" name="ano" placeholder="Insira o ano do filme" class="form-control" required>
                 <br>
                 <input type="file" name="file" class="form-control" required>
